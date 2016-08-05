@@ -23,7 +23,7 @@ RUN apt-get update && apt-get install -yy \
         iputils-ping \
         gedit
 
-RUN easy_install tox==2.1.1 \
+RUN easy_install tox \
                  pip \
                  requests
 
