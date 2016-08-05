@@ -26,7 +26,10 @@ RUN apt-get update && apt-get install -yy \
         build-essential \
         libsdl1.2-dev \
         chrpath \
+        bzip2 \
         cpio \
+        unzip \
+        make \
         diffstat
 
 RUN easy_install tox \
