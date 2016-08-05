@@ -22,7 +22,13 @@ RUN apt-get update && apt-get install -yy \
         vim \
         iputils-ping \
         gedit \
-        sudo
+        sudo \
+        build-essential \
+        libsdl1.2-dev \
+        chrpath \
+        cpio \
+        diffstat
+
 
 RUN easy_install tox \
                  pip \
