@@ -42,7 +42,7 @@ RUN pip install robotframework \
                 robotframework-scplibrary
 
 
-RUN groupadd -r openbmc && useradd -r -g openbmc openbmc
+RUN useradd -ms /bin/bash openbmc
 
 #USER openbmc
 ENV HOME /root/
