@@ -32,6 +32,9 @@ RUN apt-get update && apt-get install -yy \
         make \
         diffstat
 
+RUN apt-get update && apt-get install -yy \
+	expect \
+        curl
 
 RUN easy_install tox \
                  pip \
@@ -43,7 +46,9 @@ RUN pip install robotframework \
                 robotframework-scplibrary
 
 
-RUN groupadd -r openbmc && useradd -r -g openbmc openbmc
+RUN useradd -ms /bin/bash openbmc
+
+RUN cd /tmp && git clone https://github.com/openbmc/openbmc-test-automation.git ./obmc-test
 
 #USER openbmc
 ENV HOME /root/

@@ -33,7 +33,8 @@ RUN apt-get update && apt-get install -yy \
         diffstat
 
 RUN apt-get update && apt-get install -yy \
-	expect
+	expect \
+        curl
 
 RUN easy_install tox \
                  pip \
